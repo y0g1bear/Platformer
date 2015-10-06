@@ -29,7 +29,7 @@ You must include the elements labeled in the image:
 
 ## Hint
 
-Ggame comes with some [built in ability to detect collisions between sprites](http://brythonserver.github.io/ggame/#ggame.Sprite.collidingWithSprites), which may be useful.
+Ggame comes with a [built in ability to detect collisions between sprites](http://brythonserver.github.io/ggame/#ggame.Sprite.collidingWithSprites), which may be useful.
 
 ## Extra ideas
 
