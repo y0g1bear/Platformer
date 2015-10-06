@@ -27,6 +27,15 @@ You must include the elements labeled in the image:
    than a jump takes it). Springs are also affected by gravity so that, when created, they fall and come to rest 
    on flat ground.
 
+## Extra ideas
 
+There are lots of possibilities for extra features to add to your platform game.
+
+1. A "platform" sprite that serves as a floor but not a ceiling. The player can jump through the 
+   bottom of this platform, but will land on top of it.
+2. A "laser turret" sprite that fires laser bolts at the player.
+3. Enemies that walk along the ground.
+4. A jetpack activated by holding the down arrow key.
+5. Your own ideas!
 
 ![EXTENDED Platformer sample screen](./misc/p05img2.png)
