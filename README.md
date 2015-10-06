@@ -1,4 +1,4 @@
-# Platform Game
+# Platform Game (Level III)
 
 *Challenge by Jack Boffa, HHS '14*
 
