@@ -16,7 +16,17 @@ The game will look something like this:
 
 ![BASIC Platformer sample screen](./misc/p05img1.png)
 
+You must include the elements labeled in the image:
+
+1. Pressing 'w' creates a wall at the mouse. This is simply a square obstacle that blocks the movement 
+   of the player and other objects. I recommend making the walls snap to a grid so you can make smooth platforms.
+2. Pressing 'p' creates the player at the mouse (provided that there isn't already one on the screen). It is affected 
+   by gravity, and falls down until a wall stops it. The user can move the player by pressing and holding the 
+   left and right arrow keys. If the player is on the ground, the user can jump by pressing the up arrow key. These are some       basic characteristics, but feel free to add extra controls for the user or interesting properties.
+3. Pressing 's' creates a spring at the mouse. If the player hits a spring, she will launch upwards (higher 
+   than a jump takes it). Springs are also affected by gravity so that, when created, they fall and come to rest 
+   on flat ground.
 
 
 
-[EXTENDED Platformer sample screen](./misc/p05img2.png)
+![EXTENDED Platformer sample screen](./misc/p05img2.png)
