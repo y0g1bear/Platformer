@@ -27,9 +27,11 @@ You must include the elements labeled in the image:
    than a jump takes it). Springs are also affected by gravity so that, when created, they fall and come to rest 
    on flat ground.
 
-## Hint
+## Hints
 
-Ggame comes with a [built in ability to detect collisions between sprites](http://brythonserver.github.io/ggame/#ggame.Sprite.collidingWithSprites), which may be useful.
+* Ggame comes with a [built in ability to detect collisions 
+  between sprites](http://brythonserver.github.io/ggame/#ggame.Sprite.collidingWithSprites), 
+  which may be useful. 
 
 ## Extra ideas
 
