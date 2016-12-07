@@ -44,10 +44,5 @@ class suasage(Sprite):
         self.rotation += self.vr
 s = suasage((100,100))
 
-class cat(Sprite)
-    asset = ImagaAsset(
-
-def __init__(self, position):
-    super().__init__(
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run(s.run)
