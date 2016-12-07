@@ -30,13 +30,24 @@ class suasage(Sprite):
     """
     suasage
     """
-    asset = ImageAsset("sausage-merguez.jpg", 
-        Frame(227,0,292-227,125), 4, 'vertical')
+    asset = ImageAsset("sausage-merguez.jpg")
 
     def __init__(self, position):
-        super().__init__(SpaceShip.asset, position)
-SpaceShip((100,100))
+        super().__init__(suasage.asset, position)
+        self.vx = 1
+        self.vy = 1
+        self.vr = 0.01
+        
+    def step(self):
+        self.x += self.vx
+        self.y += self.vy
+        self.rotation += self.vr
+s = suasage((100,100))
 
+class cat(Sprite)
+    asset = ImagaAsset(
 
+def __init__(self, position):
+    super().__init__(
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run()
+myapp.run(s.run)
