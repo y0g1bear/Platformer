@@ -42,7 +42,36 @@ class suasage(Sprite):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
+        
+  
 s = suasage((100,100))
+
+class wall(Sprite):
+    lol = RectangleAsset(1500,40, noline, thist)
+    
+    def __init__(self):
+        super().__init__(wall.lol, (5,600))
+p = wall()     
+
+class sp(App):
+    """
+    
+    """
+    def __init__(self, width, height):
+        super().__init__(width, height)
+        black = Color(0, 1)
+        noline = LineStyle(0, black)
+        bg = Sprite(bg_asset, (0,0))
+       
+       
+
+    def step(self):
+        for ship in self.getSpritesbyClass(suasage):
+            ship.step()
+            if self.y >= 1000:
+                self.vy = self.vy*-1
+                self.vx = self.vx*-1
+                print("it works")
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run(s.step)
