@@ -8,8 +8,8 @@ https://github.com/HHS-IntroProgramming/Platformer
 """
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 
-SCREEN_WIDTH = 640
-SCREEN_HEIGHT = 480
+SCREEN_WIDTH = 1500
+SCREEN_HEIGHT = 1000
 
 blueviolet = Color(0x8a2be2, 1.0)
 hotpink = Color(0xff69b4, 1.0)
@@ -45,4 +45,4 @@ class suasage(Sprite):
 s = suasage((100,100))
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run(s.run)
+myapp.run(s.step)
