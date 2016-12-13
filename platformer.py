@@ -32,19 +32,24 @@ class suasage(Sprite):
     """
     asset = ImageAsset("sausage-merguez.jpg")
 
-    def __init__(self, position):
+    def __init__(self, position,invx, invy):
         super().__init__(suasage.asset, position)
-        self.vx = 1
-        self.vy = 1
-        self.vr = 0.01
+        self.vx = invx
+        self.vy = invy
+        self.vr = 0
         
     def step(self):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
-        
+        if self.y >= 1000:
+                self.vy = self.vy*-1
+                self.vx = self.vx*-1
+                print("it works")
   
-s = suasage((100,100))
+s = suasage((0,0),40,40)
+s = suasage((1200,0),-40,0)
+
 
 class wall(Sprite):
     lol = RectangleAsset(1500,40, noline, thist)
@@ -68,10 +73,6 @@ class sp(App):
     def step(self):
         for ship in self.getSpritesbyClass(suasage):
             ship.step()
-            if self.y >= 1000:
-                self.vy = self.vy*-1
-                self.vx = self.vx*-1
-                print("it works")
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run(s.step)
+myapp.run()
