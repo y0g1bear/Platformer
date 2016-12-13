@@ -39,7 +39,6 @@ class suasage(Sprite):
         self.vr = 0
         
     def step(self):
-        print("hello")
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
@@ -83,5 +82,5 @@ def duh():
         ship.step()
 
 
-myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
+myapp = sp(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run(duh)
