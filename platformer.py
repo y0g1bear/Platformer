@@ -21,10 +21,10 @@ white = Color(0xfafafa, 1.0)
 noline = LineStyle(1,white)
 
 # Background
-black = Color(0, 1)
-noline = LineStyle(1, Aquamarine)
-bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
-bg = Sprite(bg_asset, (0,0))
+#black = Color(0, 1)
+#noline = LineStyle(1, Aquamarine)
+#bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
+#bg = Sprite(bg_asset, (0,0))
 
 class suasage(Sprite):
     """
@@ -49,9 +49,6 @@ class suasage(Sprite):
                 print("it works")
         """
         
-s = suasage((0,0),40,40)
-s = suasage((1200,0),-40,0)
-
 
 class wall(Sprite):
     lol = RectangleAsset(1500,40, noline, thist)
@@ -67,17 +64,21 @@ class sp(App):
     """
     def __init__(self, width, height):
         super().__init__(width, height)
+        black = Color(0, 1)
+        noline = LineStyle(0, black)
+        bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
+        bg = Sprite(bg_asset, (0,0))
+        s = suasage((0,0),40,40)
+        s = suasage((1200,0),-40,0)
 
+       
        
 
     def step(self):
         for ship in self.getSpritesbyClass(suasage):
             ship.step()
 
-def duh():
-    for ship in App.getSpritesbyClass(suasage):
-        ship.step()
 
 
 myapp = sp(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run(duh)
+myapp.run()
