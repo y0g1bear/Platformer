@@ -32,13 +32,14 @@ class suasage(Sprite):
     """
     asset = ImageAsset("sausage-merguez.jpg")
 
-    def __init__(self, position,invx, invy):
+    def __init__(self, position, invx, invy):
         super().__init__(suasage.asset, position)
         self.vx = invx
         self.vy = invy
         self.vr = 0
         
     def step(self):
+        print("hello")
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
@@ -58,6 +59,7 @@ class wall(Sprite):
     
     def __init__(self):
         super().__init__(wall.lol, (5,600))
+
 p = wall()     
 
 class sp(App):
@@ -77,7 +79,7 @@ class sp(App):
             ship.step()
 
 def duh():
-    for ship in self.getSpritesbyClass(suasage):
+    for ship in App.getSpritesbyClass(suasage):
         ship.step()
 
 
