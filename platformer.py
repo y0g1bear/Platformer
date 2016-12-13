@@ -76,5 +76,10 @@ class sp(App):
         for ship in self.getSpritesbyClass(suasage):
             ship.step()
 
-myapp = sp(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run()
+def duh():
+    for ship in self.getSpritesbyClass(suasage):
+        ship.step()
+
+
+myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
+myapp.run(duh)
