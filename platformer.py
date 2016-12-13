@@ -65,7 +65,7 @@ class sp(App):
     def __init__(self, width, height):
         super().__init__(width, height)
         black = Color(0, 1)
-        noline = LineStyle(0, black)
+        noline = LineStyle(1, Aquamarine)
         bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
         bg = Sprite(bg_asset, (0,0))
         s = suasage((0,0),40,40)
