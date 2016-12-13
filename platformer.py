@@ -36,7 +36,7 @@ class suasage(Sprite):
         super().__init__(suasage.asset, position)
         self.vx = invx
         self.vy = invy
-        self.vr = 0
+        self.vr = 0.25
         
     def step(self):
         self.x += self.vx
@@ -68,9 +68,12 @@ class sp(App):
         noline = LineStyle(1, Aquamarine)
         bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
         bg = Sprite(bg_asset, (0,0))
-        s = suasage((0,0),40,40)
-        s = suasage((1200,0),-40,0)
-
+        s = suasage((0,0),0.5,0.5)
+        s = suasage((1200,0),-0.5,0)
+        s = suasage((1200,800),-0.5,-0.5)
+        s = suasage((0,800),0.5,-0.5)
+        s = suasage((450,450),0,0)
+        p = wall() 
        
        
 
