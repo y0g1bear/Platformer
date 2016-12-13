@@ -42,11 +42,13 @@ class suasage(Sprite):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
+        """
         if self.y >= 1000:
                 self.vy = self.vy*-1
                 self.vx = self.vx*-1
                 print("it works")
-  
+        """
+        
 s = suasage((0,0),40,40)
 s = suasage((1200,0),-40,0)
 
