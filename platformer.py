@@ -8,7 +8,7 @@ https://github.com/HHS-IntroProgramming/Platformer
 """
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 
-SCREEN_WIDTH = 1500
+SCREEN_WIDTH = 2000
 SCREEN_HEIGHT = 1000
 
 blueviolet = Color(0x8a2be2, 1.0)
@@ -43,19 +43,18 @@ class suasage(Sprite):
         self.y += self.vy
         self.rotation += self.vr
         
-        if self.y >= 655:
+        if self.y >= 655 or self.y <= 0:
                 self.vy = self.vy*-1
-                self.vx = self.vx*-1
-       
-        if self.y >=0:
-            self.vy = self.vy*1
-            self.vx =self.vx*1
+                
+        if self.x >= 1500 or self.x <= 0:
+            self.vx = self.vx*-1
+        
             
             
         
 
 class wall(Sprite):
-    lol = RectangleAsset(1500,40, noline, thist)
+    lol = RectangleAsset(2000,40, noline, thist)
     
     def __init__(self):
         super().__init__(wall.lol, (5,925))
@@ -74,9 +73,11 @@ class sp(App):
         bg = Sprite(bg_asset, (0,0))
         s = suasage((0,0),5,5)
         s = suasage((1200,0),-5,5)
-        s = suasage((450,450),1,1)
+        s = suasage((450,450),5,5)
+        s = suasage((36,100),10,5)
+        s = suasage((1000,500),5,5)
         p = wall() 
-       
+    
        
 
     def step(self):
