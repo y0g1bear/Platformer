@@ -36,7 +36,7 @@ class suasage(Sprite):
         super().__init__(suasage.asset, position)
         self.vx = invx
         self.vy = invy
-        self.vr = 0
+        self.vr = 0.001
         
     def step(self):
         self.x += self.vx
