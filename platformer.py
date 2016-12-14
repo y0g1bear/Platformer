@@ -36,25 +36,29 @@ class suasage(Sprite):
         super().__init__(suasage.asset, position)
         self.vx = invx
         self.vy = invy
-        self.vr = 0.25
+        self.vr = 0
         
     def step(self):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
-        """
-        if self.y >= 1000:
+        
+        if self.y >= 655:
                 self.vy = self.vy*-1
                 self.vx = self.vx*-1
-                print("it works")
-        """
+       
+        if self.y >=0:
+            self.vy = self.vy*1
+            self.vx =self.vx*1
+            
+            
         
 
 class wall(Sprite):
     lol = RectangleAsset(1500,40, noline, thist)
     
     def __init__(self):
-        super().__init__(wall.lol, (5,600))
+        super().__init__(wall.lol, (5,925))
 
 p = wall()     
 
@@ -68,11 +72,9 @@ class sp(App):
         noline = LineStyle(1, Aquamarine)
         bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
         bg = Sprite(bg_asset, (0,0))
-        s = suasage((0,0),0.5,0.5)
-        s = suasage((1200,0),-0.5,0)
-        s = suasage((1200,800),-0.5,-0.5)
-        s = suasage((0,800),0.5,-0.5)
-        s = suasage((450,450),0,0)
+        s = suasage((0,0),5,5)
+        s = suasage((1200,0),-5,5)
+        s = suasage((450,450),1,1)
         p = wall() 
        
        
