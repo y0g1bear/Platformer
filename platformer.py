@@ -69,13 +69,13 @@ class monkey(Sprite):
         self.vy = invy
         self.vr = 0
         sp.listenKeyEvent("keydown", "up arrow", self.up)
-        sp.listenKeyEvent("keyup", "up arrow", self.down)
+        sp.listenKeyEvent("keyup", "up arrow", self.up2)
         
         sp.listenKeyEvent("keydown", "right arrow", self.right)
-        sp.listenKeyEvent("keyup", "right arrow", self.right)
+        sp.listenKeyEvent("keyup", "right arrow", self.right2)
         
-        sp.listenKeyEvent("keydown", "down arrow" , self.up)
-        sp.listenKeyEvent("keyup", "down arrow", self.down)
+        sp.listenKeyEvent("keydown", "down arrow" , self.down)
+        sp.listenKeyEvent("keyup", "down arrow", self.down2)
         self.fxcenter = self.fycenter = 0.5
         self.up = 0
         
@@ -94,7 +94,7 @@ class monkey(Sprite):
         
     def up(self, event):
         self.up = 2
-    def down(self, event):
+    def up2(self, event):
         self.up = 0 
         
     def right(self, event):
@@ -102,7 +102,10 @@ class monkey(Sprite):
     def right2 (self, event):
         self.right = 0
     
-    def
+    def down(self, event):
+        self.down = 2
+    def down2(self, event):
+        self.down = 0
 
 
         
