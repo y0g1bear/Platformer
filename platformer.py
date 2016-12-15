@@ -53,10 +53,10 @@ class monkey(Sprite):
     """
     monkey
     """
-    shmucks = ImageAsset("th.jfif")
+    asset = ImageAsset("th.jfif")
     
-    def __init__(self,position, invx,invy):
-        super().__init__(monkey.shmucks, position)
+    def __init__(self,position,invx,invy):
+        super().__init__(monkey.asset, position)
         self.vx = invx
         self.vy = invy
         self.vr = 0
@@ -98,7 +98,7 @@ class sp(App):
         s = suasage((1000,0),-8,5)
         s = suasage((450,450),5,8)
         s = suasage((36,100),10,8)
-        l = monckey((50,50))
+        l = monkey((50,50),1,1)
         p = wall() 
     
        
