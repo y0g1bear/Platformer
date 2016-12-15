@@ -25,7 +25,15 @@ noline = LineStyle(1,hotpink)
 #noline = LineStyle(1, Aquamarine)
 #bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
 #bg = Sprite(bg_asset, (0,0))
-
+class stars(Sprite):
+    loz = ImageAsset("grass-375586_960_720.jpg")
+    height = 800
+    width = 1450
+    
+    def __init__(self,position):
+        super().__init__(stars.loz, position)
+        self.scale = 1.5
+    
 class suasage(Sprite):
     """
     suasage
@@ -43,12 +51,12 @@ class suasage(Sprite):
         self.y += self.vy
         self.rotation += self.vr
         
-        if self.y >= 500 or self.y <= 0:
+        if self.y >= 700 or self.y <= 0:
                 self.vy = self.vy*-1
                 
-        if self.x >= 1100 or self.x <= 0:
+        if self.x >= 1350 or self.x <= 0:
             self.vx = self.vx*-1
-            
+        self.scale = 0.2
 class monkey(Sprite):
     """
     monkey
@@ -60,10 +68,18 @@ class monkey(Sprite):
         self.vx = invx
         self.vy = invy
         self.vr = 0
-    
+        sp.listenKeyEvent("keydown", "up arrow", self.up)
+        sp.listenKeyEvent("keyup", "up arrow", self.down)
+        sp.listenKeyEvent("keydown", "right arrow", self.up)
+        sp.listenKeyEvent("keyup", "right arrow", self.down)
+        sp.listenKeyEvent("keydown", "down arrow" , self.up)
+        sp.listenKeyEvent("keyup", "down arrow", self.down)
+        self.fxcenter = self.fycenter = 0.5
+        self.up = 0
+        
     def step(self):
-        self.x += self.vx
-        self.y += self.vy
+        self.x += self.up
+        self.y += 0
         self.rotation += self.vr
         
         if self.y >= 500 or self.y <= 0:
@@ -72,8 +88,16 @@ class monkey(Sprite):
         if self.x >= 1100 or self.x <= 0:
             self.vx = self.vx*-1
             
-            
-            
+        self.scale = 0.5    
+        
+    def up(self, event):
+        self.up = 2
+        print ("up")
+    def down(self, event):
+        self.up = 0 
+
+
+
         
 
 class wall(Sprite):
@@ -94,11 +118,14 @@ class sp(App):
         noline = LineStyle(1, Aquamarine)
         bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
         bg = Sprite(bg_asset, (0,0))
+        p = stars((0,0))
         s = suasage((0,0),8,8)
         s = suasage((1000,0),-8,5)
         s = suasage((450,450),5,8)
         s = suasage((36,100),10,8)
-        l = monkey((50,50),1,1)
+        s = suasage((300,100),11,10)
+        l = monkey((50,50),0,0)
+      
         p = wall() 
     
        
@@ -107,7 +134,7 @@ class sp(App):
         for ship in self.getSpritesbyClass(suasage):
             ship.step()
 
-    def step(self):
+
         for lol in self.getSpritesbyClass(monkey):
             lol.step()
 
