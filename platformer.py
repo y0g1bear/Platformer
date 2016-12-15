@@ -78,10 +78,10 @@ class monkey(Sprite):
         sp.listenKeyEvent("keyup", "down arrow", self.down2)
         self.fxcenter = self.fycenter = 0.5
         self.up = 0
-        
+        self.down = 0
     def step(self):
         self.x += self.up
-        self.y += 0
+        self.y += self.down
         self.rotation += self.vr
         
         if self.y >= 500 or self.y <= 0:
@@ -105,7 +105,7 @@ class monkey(Sprite):
     def down(self, event):
         self.down = 2
     def down2(self, event):
-        self.down = 0
+        self.down = 2
 
 
         
