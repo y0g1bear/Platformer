@@ -53,10 +53,10 @@ class monkey(Sprite):
     """
     monkey
     """
-    asset = ImageAsset("th.jfif")
+    shmucks = ImageAsset("th.jfif")
     
     def __init__(self,position, invx,invy):
-        super().__init__(monkey.asset, position)
+        super().__init__(monkey.shmucks, position)
         self.vx = invx
         self.vy = invy
         self.vr = 0
