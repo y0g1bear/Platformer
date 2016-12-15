@@ -30,10 +30,10 @@ class suasage(Sprite):
     """
     suasage
     """
-    asset = ImageAsset("sausage-merguez.jpg")
+    shumcks = ImageAsset("sausage-merguez.jpg")
 
     def __init__(self, position, invx, invy):
-        super().__init__(suasage.asset, position)
+        super().__init__(suasage.shumcks, position)
         self.vx = invx
         self.vy = invy
         self.vr = 0
