@@ -92,7 +92,8 @@ class monkey(Sprite):
         
         
         if self.y >= 700 or self.y <= 0:
-                self.vy = self.vy*-1
+                self.down = self.down*-1 
+                self.up = self.up*-1
                 
         if self.x >= 1350 or self.x <= 0:
             self.vx = self.vx*-1
@@ -101,22 +102,22 @@ class monkey(Sprite):
         
         
     def up(self, event):
-        self.up = 50
+        self.up = 30
     def up2(self, event):
         self.up = 0 
         
     def right(self, event):
-        self.right = 50
+        self.right = 30
     def right2 (self, event):
         self.right = 0
     
     def down(self, event):
-        self.down = 50
+        self.down = 30
     def down2(self, event):
         self.down = 0
     
     def left(self, event):
-        self.left = 50
+        self.left = 30
     def left2(self, event):
         self.left = 0
     
