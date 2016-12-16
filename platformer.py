@@ -80,8 +80,8 @@ class monkey(Sprite):
         self.up = 0
         self.down = 0
     def step(self):
-        self.x += self.up
-        self.y += self.down
+        self.x += self.right
+        self.y += self.down - self.up
         self.rotation += self.vr
         
         if self.y >= 500 or self.y <= 0:
@@ -105,7 +105,7 @@ class monkey(Sprite):
     def down(self, event):
         self.down = 2
     def down2(self, event):
-        self.down = 2
+        self.down = 0
 
 
         
