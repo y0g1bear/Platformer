@@ -1,6 +1,6 @@
 """
 platformer.py
-Author: <your name here>
+Author: john
 Credit: <list sources used, if any>
 Assignment:
 Write and submit a program that implements the sandbox platformer game:
@@ -96,9 +96,13 @@ class monkey(Sprite):
                 self.up = self.up*-1
                 
         if self.x >= 1350 or self.x <= 0:
-            self.vx = self.vx*-1
+            self.right = self.right*-1
+            self.left = self.left*-1
             
         self.scale = 0.5  
+        
+        suasages = self.collidingWithSprites(suasage)
+        print(sausages)
         
         
     def up(self, event):
