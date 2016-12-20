@@ -103,7 +103,9 @@ class monkey(Sprite):
         
         suasages = self.collidingWithSprites(suasage)
         if len(suasages) > 0:
-            print("suasage fiasco")
+            mysuasage = suasages[0]
+            mysuasage.visible=False
+            mysuasage.destroy()
 
         
     def up(self, event):
