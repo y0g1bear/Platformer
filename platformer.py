@@ -102,7 +102,7 @@ class monkey(Sprite):
         self.scale = 0.5  
         
         suasages = self.collidingWithSprites(suasage)
-        print(sausages)
+        print(suasages)
         
         
     def up(self, event):
