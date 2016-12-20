@@ -102,8 +102,9 @@ class monkey(Sprite):
         self.scale = 0.5  
         
         suasages = self.collidingWithSprites(suasage)
-        print(suasages)
-        
+        if len(suasages) > 0:
+            print("suasage fiasco")
+
         
     def up(self, event):
         self.up = 30
