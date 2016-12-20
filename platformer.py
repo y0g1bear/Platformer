@@ -127,7 +127,10 @@ class monkey(Sprite):
         self.left = 30
     def left2(self, event):
         self.left = 0
-    
+        
+class banana(Sprite):
+    asset = ImageAsset("banana.jfif")
+
 
 
         
@@ -157,6 +160,7 @@ class sp(App):
         s = suasage((36,100),10,8)
         s = suasage((300,100),11,10)
         l = monkey((50,50),0,0)
+        j = banana(())
       
         p = wall() 
     
