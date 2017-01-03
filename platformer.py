@@ -178,7 +178,7 @@ class sp(App):
       
         p = wall() 
     def r(self.event):
-        if 
+        self.s1.visible == True
        
 
     def step(self):
