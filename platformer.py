@@ -112,32 +112,32 @@ class monkey(Sprite):
 
         
     def up(self, event):
-        if self.visible == True
-        self.up = 30
+        if self.visible == True:
+            self.up = 30
     def up2(self, event):
-        if self.visible == True
-        self.up = 0 
+        if self.visible == True:
+            self.up = 0 
         
     def right(self, event):
-        if self.visible == True
-        self.right = 30
+        if self.visible == True:
+            self.right = 30
     def right2 (self, event):
-        if self.visible == True
-        self.right = 0
+        if self.visible == True:
+            self.right = 0
     
     def down(self, event):
-        if self.visible == True
-        self.down = 30
+        if self.visible == True:
+            self.down = 30
     def down2(self, event):
-        if self.visible == True
-        self.down = 0
+        if self.visible == True:
+            self.down = 0
     
     def left(self, event):
-        if self.visible == True
-        self.left = 30
+        if self.visible == True:
+            self.left = 30
     def left2(self, event):
-        if self.visible == True
-        self.left = 0
+        if self.visible == True:
+            self.left = 0
         
 class banana(Sprite):
    asset = ImageAsset("banana.jfif")
