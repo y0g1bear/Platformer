@@ -85,19 +85,19 @@ class monkey(Sprite):
         self.right = 0
         self.left = 0
     def step(self):
+        icecreamx = self.x
+        icecreamy = self.y
         self.x += self.right - self.left
         self.y += self.down - self.up
         self.vy += 2
         self.rotation += self.vr
         
         
-        if self.y >= 700 or self.y <= 0:
-                self.down = self.down*-1 
-                self.up = self.up*-1
+        if self.y >= 720  or self.y <= 0:
+            self.y = icecreamy
                 
-        if self.x >= 1350 or self.x <= 0:
-            self.right = self.right*-1
-            self.left = self.left*-1
+        if self.x >= 1405 or self.x <= 0:
+            self.x = icecreamx
             
         self.scale = 0.5  
         
@@ -105,32 +105,45 @@ class monkey(Sprite):
         if len(suasages) > 0:
             mysuasage = suasages[0]
             mysuasage.visible=False
+            self.visible = False
+            banana((mysuasage.x, mysuasage.y))
             mysuasage.destroy()
+            
 
         
     def up(self, event):
+        if self.visible == True
         self.up = 30
     def up2(self, event):
+        if self.visible == True
         self.up = 0 
         
     def right(self, event):
+        if self.visible == True
         self.right = 30
     def right2 (self, event):
+        if self.visible == True
         self.right = 0
     
     def down(self, event):
+        if self.visible == True
         self.down = 30
     def down2(self, event):
+        if self.visible == True
         self.down = 0
     
     def left(self, event):
+        if self.visible == True
         self.left = 30
     def left2(self, event):
+        if self.visible == True
         self.left = 0
         
 class banana(Sprite):
-    asset = ImageAsset("banana.jfif")
-
+   asset = ImageAsset("banana.jfif")
+   
+   def __init__(self,pos):
+       super().__init__(banana.asset,pos)
 
 
         
@@ -160,7 +173,7 @@ class sp(App):
         s = suasage((36,100),10,8)
         s = suasage((300,100),11,10)
         l = monkey((50,50),0,0)
-        j = banana(())
+        
       
         p = wall() 
     
