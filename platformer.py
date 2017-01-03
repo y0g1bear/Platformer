@@ -107,7 +107,7 @@ class monkey(Sprite):
             mysuasage.visible=False
             self.visible = False
             banana((mysuasage.x, mysuasage.y))
-            mysuasage.destroy()
+            
             
 
         
@@ -145,6 +145,7 @@ class banana(Sprite):
    def __init__(self,pos):
        super().__init__(banana.asset,pos)
 
+    
 
         
 
@@ -167,16 +168,17 @@ class sp(App):
         bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
         bg = Sprite(bg_asset, (0,0))
         p = stars((0,0))
-        s = suasage((600,0),8,8)
-        s = suasage((1000,0),-8,5)
-        s = suasage((450,450),5,8)
-        s = suasage((600,100),10,8)
-        s = suasage((300,100),11,10)
+        self.s1 = suasage((600,0),8,8)
+        self.s2 = suasage((1000,0),-8,5)
+        self.s3 = suasage((450,450),5,8)
+        self.s4 = suasage((600,100),10,8)
+        self.s5 = suasage((300,100),11,10)
         l = monkey((50,50),0,0)
         
       
         p = wall() 
-    
+    def r(self.event):
+        if 
        
 
     def step(self):
@@ -189,3 +191,4 @@ class sp(App):
 
 myapp = sp(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
+mapp.listenKeyEvent('r', keydown, shmucs)
