@@ -179,7 +179,10 @@ class sp(App):
         p = wall() 
     def r(self.event):
         self.s1.visible == True
-       
+        self.s2.visible == True
+        self.s3.visible == True
+        self.s4.visible == True
+        self.s5.visible == True
 
     def step(self):
         for ship in self.getSpritesbyClass(suasage):
