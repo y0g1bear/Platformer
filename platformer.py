@@ -167,10 +167,10 @@ class sp(App):
         bg_asset = RectangleAsset(SCREEN_WIDTH, SCREEN_HEIGHT, noline, white)
         bg = Sprite(bg_asset, (0,0))
         p = stars((0,0))
-        s = suasage((0,0),8,8)
+        s = suasage((600,0),8,8)
         s = suasage((1000,0),-8,5)
         s = suasage((450,450),5,8)
-        s = suasage((36,100),10,8)
+        s = suasage((600,100),10,8)
         s = suasage((300,100),11,10)
         l = monkey((50,50),0,0)
         
