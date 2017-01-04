@@ -177,7 +177,7 @@ class sp(App):
         self.s3 = suasage((450,450),5,8)
         self.s4 = suasage((600,100),10,8)
         self.s5 = suasage((300,100),11,10)
-        l = monkey((50,50),0,0)
+        self.l = monkey((50,50),0,0)
         sp.listenKeyEvent("keydown",'r', self.r)
 
       
@@ -188,7 +188,7 @@ class sp(App):
        self.s3.visible = True
        self.s4.visible = True
        self.s5.visible = True
-       
+       self.l.nobs()
         
     def step(self):
         for ship in self.getSpritesbyClass(suasage):
