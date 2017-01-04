@@ -105,9 +105,13 @@ class monkey(Sprite):
         if len(suasages) > 0:
             mysuasage = suasages[0]
             mysuasage.visible=False
+            if self.visible == True:
+                self.banana = banana((mysuasage.x, mysuasage.y))
             self.visible = False
-            banana((mysuasage.x, mysuasage.y))
             
+    def nobs(self):
+        self.banana.destroy()
+   
             
 
         
@@ -174,16 +178,18 @@ class sp(App):
         self.s4 = suasage((600,100),10,8)
         self.s5 = suasage((300,100),11,10)
         l = monkey((50,50),0,0)
-        
+        sp.listenKeyEvent("keydown",'r', self.r)
+
       
         p = wall() 
-    def r(self.event):
-        self.s1.visible == True
-        self.s2.visible == True
-        self.s3.visible == True
-        self.s4.visible == True
-        self.s5.visible == True
-
+    def r(self,event):
+       self.s1.visible = True
+       self.s2.visible = True
+       self.s3.visible = True
+       self.s4.visible = True
+       self.s5.visible = True
+       print('r')
+        
     def step(self):
         for ship in self.getSpritesbyClass(suasage):
             ship.step()
@@ -194,4 +200,3 @@ class sp(App):
 
 myapp = sp(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
-mapp.listenKeyEvent('r', keydown, shmucs)
