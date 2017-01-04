@@ -111,7 +111,7 @@ class monkey(Sprite):
             
     def nobs(self):
         self.banana.destroy()
-   
+        print("lol")
             
 
         
@@ -188,7 +188,7 @@ class sp(App):
        self.s3.visible = True
        self.s4.visible = True
        self.s5.visible = True
-       print('r')
+       
         
     def step(self):
         for ship in self.getSpritesbyClass(suasage):
