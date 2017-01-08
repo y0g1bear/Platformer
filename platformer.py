@@ -8,8 +8,9 @@ https://github.com/HHS-IntroProgramming/Platformer
 """
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 
-SCREEN_WIDTH = 1450
-SCREEN_HEIGHT = 800
+SCREEN_WIDTH = 1300
+SCREEN_HEIGHT = 650
+
 
 blueviolet = Color(0x8a2be2, 1.0)
 hotpink = Color(0xff69b4, 1.0)
@@ -32,6 +33,7 @@ class stars(Sprite):
     
     def __init__(self,position):
         super().__init__(stars.loz, position)
+        print("stars")
         self.scale = 1.5
     
 class suasage(Sprite):
@@ -50,11 +52,11 @@ class suasage(Sprite):
         self.x += self.vx
         self.y += self.vy
         self.rotation += self.vr
-        
-        if self.y >= 700 or self.y <= 0:
+        self.vr = .1
+        if self.y >= 600 or self.y <= 0:
                 self.vy = self.vy*-1
                 
-        if self.x >= 1350 or self.x <= 0:
+        if self.x >= 1200 or self.x <= 0:
             self.vx = self.vx*-1
         self.scale = 0.2
 class monkey(Sprite):
@@ -93,10 +95,10 @@ class monkey(Sprite):
         self.rotation += self.vr
         
         
-        if self.y >= 720  or self.y <= 0:
+        if self.y >= 600  or self.y <= 0:
             self.y = icecreamy
                 
-        if self.x >= 1405 or self.x <= 0:
+        if self.x >= 1200 or self.x <= 0:
             self.x = icecreamx
             
         self.scale = 0.5  
@@ -111,6 +113,9 @@ class monkey(Sprite):
             
     def nobs(self):
         self.banana.destroy()
+        self.visible = True 
+        self.x = 50
+        self.y = 50
         print("lol")
             
 
